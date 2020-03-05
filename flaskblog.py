@@ -7,19 +7,21 @@ posts=[
         
     },
     {
-        'SoftwareEngineering':'Module 2','CO':'Module 2'
+        'SoftwareEngineering':'Module 322','CO':'Module 2'
         
     }
 ]
 
 
 @app.route('/')
-def hello():
+@app.route('/home')
+def home():
     return render_template('home.html',posts=posts)
 
 @app.route('/about')
 def hell():
-    return render_template('about.html')
+    return render_template('about.html',title=)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
